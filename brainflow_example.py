@@ -120,52 +120,5 @@ def main():
             logging.info('Releasing session')
             board.release_session()
 
-    # board.prepare_session()
-    # ch_indexes = board_descr['eeg_channels']
-    # sfreq = int(board_descr['sampling_rate'])
-    # ch_names = board.get_eeg_names(board.board_id)
-    # '''
-    # Collect EEG Data
-    # '''
-    # board.start_stream()
-    # print("Calibrating ...")
-    # time.sleep(5)
-    # board.get_board_data()
-
-    # # Collect eeg data for fist hand
-    # print("Hold a fist with your hand ...")
-    # time.sleep(training_length)
-    # # data = board.get_current_board_data (256) # get latest 256 packages or less, doesnt remove them from internal buffer
-    # data_0 = board.get_board_data()  # get all data and remove it from internal buffer
-
-    # #Collect eeg data for open hand
-    # # beep(sound="ping")
-    # print("Finished. Now prepare for next collection period")
-    # time.sleep(5)
-    # print("Hold a open hand ...")
-
-    # board.get_board_data()
-    # time.sleep(training_length)
-    # # data = board.get_current_board_data (256) # get latest 256 packages or less, doesnt remove them from internal buffer
-    # data_1 = board.get_board_data()  # get all data and remove it from internal buffer
-    # board.stop_stream()
-    # board.release_session()
-    # # beep(sound="ping")
-
-    # dump(data_0, open("./data/" + args.name +"data_0.pkl", 'wb'))
-    # dump(data_1, open("./data/" + args.name +"data_1.pkl", 'wb'))
-
-    # # # Apply filters
-    # # data_0 = eeg_tools.apply_noise_filter(data_0, ch_indexes, sfreq)
-    # # data_1 = eeg_tools.apply_noise_filter(data_1, ch_indexes, sfreq)
-    # # data_0 = data_0[ch_indexes[0]:ch_indexes[-1] + 1, 2*sfreq:]
-    # # data_1 = data_1[ch_indexes[0]:ch_indexes[-1] + 1, 2*sfreq:]
-
-    # # # Plot egg channels before
-    # # plt.figure(figsize =[10,15])
-    # # eeg_tools.plot_eeg(data_0, len(ch_indexes))
-    # # eeg_tools.plot_eeg(data_1, len(ch_indexes))
-    # # plt.show()
-
 if __name__ == "__main__":
     main()
